@@ -348,16 +348,14 @@ Facet by the dataset variable, placing the plots in a 3 column grid, and don't a
 
 5.  Finally, let's plot all datasets at once. In order to do this we will make use of faceting.
 
-```{r all-viz, eval=FALSE, fig.fullwidth=TRUE}
+```{r}
 ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
   geom_point()+
   facet_wrap(~ dataset, ncol = 3) +
   theme(legend.position = "none")
 ```
 
-And we can use the `group_by` function to generate all the summary correlation coefficients.
-
-```{r all-r, eval=FALSE}
+```{r}
 datasaurus_dozen %>%
   group_by(dataset) %>%
   summarize(r = cor(x, y)) %>%
@@ -382,7 +380,7 @@ Note that these values get saved in the YAML.
 knitr::include_graphics("img/fig-resize-local.png")
 ```
 
-You can also use different figure sizes for differen figures.
+You can also use different figure sizes for different figures.
 To do so click on the gear icon within the chunk where you want to make a change.
 Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`.
 You can change them by defining different values directly in your R Markdown document as well.
