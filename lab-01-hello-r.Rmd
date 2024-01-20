@@ -116,7 +116,7 @@ The top portion of your R Markdown file (between the three dashed lines) is call
 
 Open the R Markdown (Rmd) file in your project, change the author name to your name, and knit the document.
 
-```{r yaml-raw-to-rendered, fig.fullwidth=TRUE, echo = FALSE}
+```{r yaml-raw-to-rendered, echo=, fig.fullwidth=TRUE}
 knitr::include_graphics("img/yaml-raw-to-rendered.png")
 ```
 
